@@ -10,7 +10,11 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,json,css,scss,md,yml,yaml}": "prettier --write"
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,css,scss,yml,yaml}": "prettier --write"
   },
   "dependencies": {
     "react": "^19.1.0",
