@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  position: relative;
+  z-index: 2;
+  background-color: rgb(245, 245, 245);
+  height: 100vh;
+  overflow: hidden;
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.2em;
+  color: #111111;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
+  min-width: 250px;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button::-moz-focus-inner {
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+:focus {
+  outline: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.button--icon {
+  cursor: pointer;
+}

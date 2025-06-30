@@ -1,0 +1,28 @@
+.tasks-filter {
+  display: inline-flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.tasks-filter__item button {
+  background-color: white;
+  border: none;
+  padding: 3px 7px;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgb(128, 128, 128);
+}
+
+.tasks-filter__item:hover button {
+  outline: 1px solid rgba(175, 47, 47, 0.1);
+}
+
+.selected {
+  border: 1px solid rgba(175, 47, 47, 0.2);
+}
+
+@media (max-width: 430px) {
+  .tasks-filter {
+    bottom: 10px;
+  }
+}
