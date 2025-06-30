@@ -2,8 +2,6 @@ import TasksFilter from "./TasksFilter";
 import "../assets/styles/Footer.css";
 function Footer(props) {
   return (
-
-    
     <footer className="footer">
       <span className="todo-count">{props.count} items left</span>
       <TasksFilter />
