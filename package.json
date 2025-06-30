@@ -7,10 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "prepare": "husky install"
-  },
-  "lint-staged": {
-    "**/*":"prettier --write --ignore-unknown"
+    "prepare": "husky install",
+    "lint-staged": "prettier --write --ignore-unknown"
   },
   "dependencies": {
     "react": "^19.1.0",
