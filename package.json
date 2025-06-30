@@ -10,7 +10,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "*.{js,jsx,ts,tsx,json,css,scss,md,yml,yaml}": "prettier --write"
   },
   "dependencies": {
     "react": "^19.1.0",
