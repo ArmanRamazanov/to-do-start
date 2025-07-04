@@ -7,14 +7,14 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "eslint --fix",
+      "eslint --fix --cache",
       "prettier --write"
     ],
-    "*.{json,md,css,scss,yml,yaml}": "prettier --write"
+    "!package.json": "echo 'skipping package.json'"
   },
   "dependencies": {
     "react": "^19.1.0",

@@ -108,10 +108,9 @@ input[type="checkbox"]:checked ~ .custom-checkbox {
   color: rgb(205, 205, 205);
 }
 
-/* .task--editing {
-    border-bottom: none;
-  padding: 0;
-} */
+.task--active .view {
+  display: block;
+}
 
 .task--editing .view {
   display: none;
