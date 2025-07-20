@@ -9,7 +9,11 @@ body {
   background-color: rgb(245, 245, 245);
   height: 100vh;
   overflow: hidden;
-  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font:
+    14px "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
   line-height: 1.2em;
   color: #111111;
   -webkit-font-smoothing: antialiased;

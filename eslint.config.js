@@ -7,11 +7,12 @@ import prettierPlugin from "eslint-plugin-prettier";
 import { defineConfig, globalIgnores } from "eslint/config";
 
 export default defineConfig([
-  globalIgnores([".node_modules/*",
-                 "index.html",
-                 "App",
-                 "package-lock.json",
-                 "package.json"
+  globalIgnores([
+    ".node_modules/*",
+    "index.html",
+    "App",
+    "package-lock.json",
+    "package.json",
   ]),
   {
     files: ["**/*.{js,jsx}"],
@@ -36,7 +37,7 @@ export default defineConfig([
     rules: {
       // "no-unused-vars": ["error", { varsIgnorePattern: "^[A-Z_]" }],
       //there were problems when importing dispatchContext inside DispatchContextProvider.jsx
-      "no-unused-vars" : "off"
+      "no-unused-vars": "off",
     },
   },
 ]);

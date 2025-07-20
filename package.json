@@ -13,8 +13,7 @@
     "*.{js,jsx}": [
       "eslint --fix --cache",
       "prettier --write"
-    ],
-    "!package.json": "echo 'skipping package.json'"
+    ]
   },
   "dependencies": {
     "react": "^19.1.0",
