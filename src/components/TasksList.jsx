@@ -1,6 +1,13 @@
+import { useEffect } from "react";
 import Task from "./Task";
+import PropTypes from "prop-types";
 import "../assets/styles/TasksList.css";
-function TasksList({ todos, filterState }) {
+
+function TasksList({ todos, filterState = "filter-active" }) {
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(todos));
+  }, [todos]);
+
   return (
     <ul>
       {todos
@@ -19,5 +26,9 @@ function TasksList({ todos, filterState }) {
     </ul>
   );
 }
+
+TasksList.propTypes = {
+  todos: PropTypes.array.isRequired,
+};
 
 export default TasksList;

@@ -20,7 +20,7 @@ function App() {
           <NewTaskForm />
         </header>
         <main className="card__main">
-          <TasksList todos={todos} filterState={filter} />
+          <TasksList filterState={filter} todos={todos} />
         </main>
         <Footer setFilter={setFilter} count={remainingTodos} />
       </div>

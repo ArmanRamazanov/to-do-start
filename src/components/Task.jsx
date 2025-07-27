@@ -1,12 +1,15 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useReducer } from "react";
+import { reduce } from "../assets/helperFunctions/reduce";
 import { ACTIONS } from "../assets/helperFunctions/ActionsObject";
 import { dispatchContext } from "../assets/helperFunctions/DispatchContext";
+import { formatDistanceToNow } from "date-fns";
+import PropTypes from "prop-types";
 import "../assets/styles/Task.css";
 
 function Task({ todo }) {
-  const [name, setName] = useState(todo.name);
   const [editState, setEditState] = useState(false);
   const { dispatch } = useContext(dispatchContext);
+  const [name, setName] = useState(todo.name);
 
   function handleToggle() {
     dispatch({ type: ACTIONS.TOGGLE_TODO, payload: { id: todo.id } });
@@ -44,7 +47,9 @@ function Task({ todo }) {
           </label>
         </div>
         <div>
-          <span className="task__date"></span>
+          <span className="task__date">
+            {formatDistanceToNow(todo.createdAt, { includeSeconds: true })}
+          </span>
           <div className="task__actions">
             <button
               className="button button-edit button--icon"
@@ -76,5 +81,9 @@ function Task({ todo }) {
     </li>
   );
 }
+
+Task.propTypes = {
+  todo: PropTypes.object.isRequired,
+};
 
 export default Task;
